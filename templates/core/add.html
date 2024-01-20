@@ -1,0 +1,48 @@
+{% extends 'core/home.html' %}
+{% block title%} Add Student {% endblock %}
+{% block content%} 
+    
+    <div class="row">
+       
+        <div class="col-sm-4 mx-auto"> 
+            <h1>Add New Students</h1>
+            <form action="/core/add/" method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Roll</label>
+                    <input type="email"name="roll" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="name"name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    
+                </div>
+
+                <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Address</label>
+                    <textarea class="form-control" name="address" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Phone</label>
+                    <input type="number"name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    
+                </div>
+            <div class="container text-center">
+                <button class="btn btn-primary">Add Student</button>
+            </div>
+
+            
+                
+            </form>
+        </div>
+    </div>
+{% endblock %}
