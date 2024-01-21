@@ -9,3 +9,6 @@ urlpatterns = [
 
 
 #git remote add origin https://github.com/abdullahalfahad98/crud.git
+
+#Project Link
+#https://www.youtube.com/watch?v=VETRxH88OUM&t=1991s
