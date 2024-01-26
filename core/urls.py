@@ -5,6 +5,10 @@ urlpatterns = [
     path("",home),
     path("home/",home),
     path("add/",AddStudent),
+    # path("delete/",delete_std),
+    path("delete/<int:roll>",delete_std),
+    path("update/<int:roll>",update_std),
+    
 ]
 
 

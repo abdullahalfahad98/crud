@@ -10,30 +10,30 @@
                 {% csrf_token %}
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Roll</label>
-                    <input type="roll"name="roll" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="roll"name="roll" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required value="{{std.roll}}">
                     
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Name</label>
-                    <input type="name"name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="name"name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required value="{{std.name}}">
                     
                 </div>
 
                 <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required value="{{std.email}}">
                 
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Address</label>
-                    <textarea class="form-control" name="address" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="address" id="exampleFormControlTextarea1" rows="3">{{std.address}}</textarea>
                     
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Phone</label>
-                    <input type="number"name="cc" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="number"name="cc" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required value="{{std.phone}}">
                     
                 </div>
             <div class="container text-center">

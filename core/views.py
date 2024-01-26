@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Student
 
 # Create your views here.
 def home(request):
-    return render (request,"core/home.html", {})
+    std = Student.objects.all()
+    return render (request,"core/home.html", {'std':std })
 
 def AddStudent(request):
     if request.method== 'POST' or request.method== 'post':
@@ -25,6 +26,46 @@ def AddStudent(request):
         s.address = address
 
         s.save()
+        return redirect("/core/home")
 
         
     return render(request,'core/add.html', {})
+
+def delete_std(request,roll):
+    s=Student.objects.get(pk=roll)
+    s.delete()
+    return redirect("/core/home")
+
+
+def update_std(request,roll):
+    up=Student.objects.get(pk=roll)
+
+    return(render,'core/update.html',{'up':up})
+
+def do_update_std(request,roll):
+    up_roll= request.POST.get("roll")
+    up_name=request.POST.get("name")
+    up_email=request.POST.get("email")
+    up_phone=request.POST.get("address")
+    up_address=request.POST.get("address")
+
+
+
+
+
+
+
+    up=Student.objects.get(pk=roll)
+    
+    up.roll = up_roll
+    up.name = up_name
+    up.email = up_email
+    up.phone = up_phone
+    up.address = up_address
+
+    up.save()
+    return redirect("/core/home")
+
+
+
+
