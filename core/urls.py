@@ -7,8 +7,8 @@ urlpatterns = [
     path("add/",AddStudent),
     # path("delete/",delete_std),
     path("delete/<int:roll>",delete_std),
-    path("update/<int:roll>",update_std),
-    path("do-update/<int:roll>",do_update_std),
+    path("update/<int:pk>",update_std),
+    path("do-update/<int:pk>",do_update_std),
     
 ]
 
